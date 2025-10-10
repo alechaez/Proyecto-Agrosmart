@@ -41,7 +41,6 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/api/alerts/**").hasAnyRole("USER","ADMIN")
                         .requestMatchers(HttpMethod.GET, "/api/purchase-orders/**").hasAnyRole("USER","ADMIN")
 
-                        // Todo lo que sea mutación bajo /api/** solo ADMIN
                         .requestMatchers(HttpMethod.POST, "/api/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT,  "/api/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE,"/api/**").hasRole("ADMIN")
